@@ -1,0 +1,24 @@
+{
+  "name": "avatar-virtual-node",
+  "version": "1.0.0",
+  "description": "\"# pepper_virtual_node\" \r Server for the app requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariasol210/pepper_virtual_node.git"
+  },
+  "author": "Sol Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariasol210/pepper_virtual_node/issues"
+  },
+  "homepage": "https://github.com/mariasol210/pepper_virtual_node#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
