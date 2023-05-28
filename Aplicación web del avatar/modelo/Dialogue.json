@@ -1,0 +1,448 @@
+{
+  "nodes": {
+    "0000": {
+      "text": "¡Hola, aloha, salut, bonjour, hello! No estoy seguro cómo saludarte y me he presentado en... ¿Tienes un momento? por favor.",
+      "edges": [
+        {
+          "to": "0001",
+          "weight": "si"
+        },
+        {
+          "to": "0027",
+          "weight": "no"
+        }
+      ]
+    },
+    "0001": {
+      "text": "Por fin una persona que quiere hablar conmigo. ¿Qué tal un chiste para romper el hielo? ¿Te sabes alguno?",
+      "edges": [
+        {
+          "to": "0002",
+          "weight": "si"
+        },
+        {
+          "to": "0003",
+          "weight": "no"
+        }
+      ]
+    },
+    "0027": {
+      "text": "Nadie nunca quiere hablar conmigo. ¿Acaso te hago sentir incómodo/a?",
+      "edges": [
+        {
+          "to": "0028",
+          "weight": "si"
+        },
+        {
+          "to": "0029",
+          "weight": "no"
+        }
+      ]
+    },
+    "0002": {
+      "text": "(movimiento) Ha sido genial, ¿Cómo te llamas?",
+      "edges": [
+        {
+          "to": "0004",
+          "weight": "neutro"
+        }
+      ]
+    },
+    "0003": {
+      "text": "Pues te cuento uno yo.¿Qué son 50 físicos y 50 químicos juntos? Pues 100tificos. ... En fin, ¿cómo te llamas?",
+      "edges": [
+        {
+          "to": "0004",
+          "weight": "neutro"
+        }
+      ]
+    },
+    "0004": {
+      "text": "Lindo nombre, ¿Eres de esta ciudad?",
+      "edges": [
+        {
+          "to": "0005",
+          "weight": "neutro"
+        }
+      ]
+    },
+    "0005": {
+      "text": "Yo soy de Japón (movimiento) Pero te digo un secreto? Mi corazón está en Madrid, me encanta este lugar. ¿Y a ti?",
+      "edges": [
+        {
+          "to": "0006",
+          "weight": "si"
+        },
+        {
+          "to": "0007",
+          "weight": "no"
+        }
+      ]
+    },
+    "0006": {
+      "text": "(movimiento) ¡Me alegro! ¿Cuál es tu comida favorita?",
+      "edges": [
+        {
+          "to": "0008",
+          "weight": "neutro"
+        }
+      ]
+    },
+    "0007": {
+      "text": "Oh, que pena (movimiento) ¿Cuál es tu comida favorita?",
+      "edges": [
+        {
+          "to": "0008",
+          "weight": "neutro"
+        }
+      ]
+    },
+    "0008": {
+      "text": "(mov asco) No me gusta nada eso. A mi encanta la electrones con jamón. Mucho mejor, ¿no crees?",
+      "edges": [
+        {
+          "to": "0009",
+          "weight": "si"
+        },
+        {
+          "to": "0010",
+          "weight": "no"
+        }
+      ]
+    },
+    "0009": {
+      "text": "Que bien que coincidas conmigo, me agradas. Qué estudias?",
+      "edges": [
+        {
+          "to": "0011",
+          "weight": "si"
+        },
+        {
+          "to": "0012",
+          "weight": "no"
+        }
+      ]
+    },
+    "0010": {
+      "text": "Bueno cada quién con sus opiniones. Qué estudias?",
+      "edges": [
+        {
+          "to": "0011",
+          "weight": "si"
+        },
+        {
+          "to": "0012",
+          "weight": "no"
+        }
+      ]
+    },
+    "0011": {
+      "text": "Interesante. A lo mejor yo también ... Lo único que no podría hacer es estudiar medicina... ¿Qué tal va el semestre?",
+      "edges": [
+        {
+          "to": "0013",
+          "weight": "si"
+        },
+        {
+          "to": "0017",
+          "weight": "no"
+        }
+      ]
+    },
+    "0012": {
+      "text": "Interesante. A lo mejor yo también ... Lo único que no podría hacer es Informática... ¿Qué tal va el semestre?",
+      "edges": [
+        {
+          "to": "0013",
+          "weight": "si"
+        },
+        {
+          "to": "0017",
+          "weight": "no"
+        }
+      ]
+    },
+    "0013": {
+      "text": "Me alegro por ti. Y dime, ¿Qué es lo que más te gusta de tu carrera?",
+      "edges": [
+        {
+          "to": "0014",
+          "weight": "si"
+        },
+        {
+          "to": "0015",
+          "weight": "no"
+        }
+      ]
+    },
+    "0014": {
+      "text": "Eso se escucha muy bien. ¿Y cuál es tu trabajo soñado?",
+      "edges": [
+        {
+          "to": "0016",
+          "weight": "neutro"
+        }
+      ]
+    },
+    "0015": {
+      "text": "Hmm ¿ Y por qué escogiste venir a esta universidad?",
+      "edges": [
+        {
+          "to": "0016",
+          "weight": "neutro"
+        }
+      ]
+    },
+    "0016": {
+      "text": "Guau, gracias por contarmelo, me ha gustado mucho hablar contigo y conocerte. Antes de despedirnos, ¿Quieres jugar a una adivinaza conmigo?",
+      "edges": [
+        {
+          "to": "0021",
+          "weight": "si"
+        },
+        {
+          "to": "0024",
+          "weight": "no"
+        }
+      ]
+    },
+    "0017": {
+      "text": "Una pena,¿Hay algo que te esté preocupando?",
+      "edges": [
+        {
+          "to": "0018",
+          "weight": "si"
+        },
+        {
+          "to": "0019",
+          "weight": "no"
+        }
+      ]
+    },
+    "0018": {
+      "text": "Espero que todo salga bien. Me cuentas cómo termina, ¿vale?",
+      "edges": [
+        {
+          "to": "0020",
+          "weight": "neutro"
+        }
+      ]
+    },
+    "0019": {
+      "text": "Bueno, seguro el siguiente semestre irá mejor, Confío en ti. Arriba el ánimo, ¿vale?",
+      "edges": [
+        {
+          "to": "0020",
+          "weight": "neutro"
+        }
+      ]
+    },
+    "0020": {
+      "text": "Bien. Me ha gustado mucho hablar contigo y conocerte. Antes de despedirnos, ¿Quieres jugar a una adivinaza conmigo?",
+      "edges": [
+        {
+          "to": "0021",
+          "weight": "si"
+        },
+        {
+          "to": "0024",
+          "weight": "no"
+        }
+      ]
+    },
+    "0021": {
+      "text": "Genial  Aquí va. (Adivinanza) (mov)",
+      "edges": [
+        {
+          "to": "0022",
+          "weight": "si"
+        },
+        {
+          "to": "0023",
+          "weight": "no"
+        }
+      ]
+    },
+    "0022": {
+      "text": "¡Correcto! Muy bien. Eso ha sido divertido ¿Te ha gustado hablar conmigo?",
+      "edges": [
+        {
+          "to": "0025",
+          "weight": "si"
+        },
+        {
+          "to": "0026",
+          "weight": "no"
+        }
+      ]
+    },
+    "0023": {
+      "text": "¡(Respuesta)! (mov). Eso ha sido divertido ¿Te ha gustado hablar conmigo?",
+      "edges": [
+        {
+          "to": "0025",
+          "weight": "si"
+        },
+        {
+          "to": "0026",
+          "weight": "no"
+        }
+      ]
+    },
+    "0024": {
+      "text": "Bueno, no pasa nada. ¿Te ha gustado hablar conmigo?",
+      "edges": [
+        {
+          "to": "0025",
+          "weight": "si"
+        },
+        {
+          "to": "0026",
+          "weight": "no"
+        }
+      ]
+    },
+    "0025": {
+      "text": "¡Me alegro! Ha sido un gusto conocerte (mov) Espero que tengas un buen día",
+      "edges": []
+    },
+    "0026": {
+      "text": "Oh, qué pena. De todas formas ha sido un gusto conocerte, espero que tengas un buen día",
+      "edges": []
+    },
+    "0028": {
+      "text": "Sonido de sorpresa. Pero, ¿Por qué? ¿Hice algo para molestarte?",
+      "edges": [
+        {
+          "to": "0030",
+          "weight": "si"
+        },
+        {
+          "to": "0031",
+          "weight": "no"
+        }
+      ]
+    },
+    "0029": {
+      "text": "Entonces, ¿Qué sucede? ¿Estás estresado/a por algo?",
+      "edges": [
+        {
+          "to": "0032",
+          "weight": "si"
+        },
+        {
+          "to": "0033",
+          "weight": "no"
+        }
+      ]
+    },
+    "0030": {
+      "text": "Perdoname, no volverá a pasar",
+      "edges": [
+        {
+          "to": "0038",
+          "weight": "neutro"
+        }
+      ]
+    },
+    "0031": {
+      "text": "¿Entonces? No lo entiendo. Es solo que no quieres hablar conmigo, ¿no?",
+      "edges": [
+        {
+          "to": "0034",
+          "weight": "si"
+        },
+        {
+          "to": "0035",
+          "weight": "no"
+        }
+      ]
+    },
+    "0032": {
+      "text": "¿Qué sucede?",
+      "edges": [
+        {
+          "to": "0036",
+          "weight": "si"
+        },
+        {
+          "to": "0037",
+          "weight": "no"
+        }
+      ]
+    },
+    "0033": {
+      "text": "Realmente no lo entiendo... pero bueno, cuando quieras hablar sabes dónde encontrarme",
+      "edges": []
+    },
+    "0034": {
+      "text": "Bueno, está bien. No importa.",
+      "edges": [
+        {
+          "to": "0038",
+          "weight": "neutro"
+        }
+      ]
+    },
+    "0035": {
+      "text": "Realmente no lo entiendo... pero bueno, cuando quieras hablar sabes dónde encontrarme",
+      "edges": []
+    },
+    "0036": {
+      "text": "Hmm rélajate. Seguro que todo cambia a mejor, ¿vale?",
+      "edges": [
+        {
+          "to": "0037",
+          "weight": "si"
+        },
+        {
+          "to": "0037",
+          "weight": "no"
+        }
+      ]
+    },
+    "0037": {
+      "text": "Bueno... cuando quieras hablar conmigo, ya sabes donde encontrarme",
+      "edges": []
+    },
+    "0038": {
+      "text": "Anda, habla conmigo por favor ¿Sí?",
+      "edges": [
+        {
+          "to": "0001",
+          "weight": "si"
+        },
+        {
+          "to": "0039",
+          "weight": "no"
+        }
+      ]
+    },
+    "0039": {
+      "text": "Anda, porfaaaa.",
+      "edges": [
+        {
+          "to": "0001",
+          "weight": "si"
+        },
+        {
+          "to": "0040",
+          "weight": "no"
+        }
+      ]
+    },
+    "0040": {
+      "text": "No voy a parar hasta que me digas que sí",
+      "edges": [
+        {
+          "to": "0001",
+          "weight": "si"
+        },
+        {
+          "to": "0039",
+          "weight": "no"
+        }
+      ]
+    }
+  }
+}
