@@ -1,0 +1,24 @@
+ID;sexo;edad;estudiante;area;empatia_hacia;fake;comodo_hablar;mov_adecuado;contacto;humano;ser_vivo;amigable;interactivo;mecanico;antipatico;empatia;agusto_sesion;seguro;proximidad
+1;Femenino;> 40;No;Arquitectura, Ingeniería y Diseño;Bastante;Un poco;Mucho;Bastante;Mucho;Bastante;Algo;Mucho;Mucho;Un poco;Nada;Mucho;Mucho;Mucho;Mucho
+2;Masculino;> 40;No;Arquitectura, Ingeniería y Diseño;Mucho;Un poco;Mucho;Mucho;Mucho;Algo;Algo;Mucho;Bastante;Un poco;Nada;Mucho;Mucho;Mucho;Mucho
+3;Femenino;Entre 21 y 25;Si;Arquitectura, Ingeniería y Diseño;Algo;Un poco;Algo;Algo;Un poco;Nada;Nada;Bastante;Bastante;Algo;Nada;Algo;Bastante;Algo;Algo
+4;Femenino;Entre 21 y 25;Si;Arquitectura, Ingeniería y Diseño;Bastante;Mucho;Algo;Un poco;Algo;Nada;Nada;Algo;Bastante;Mucho;Nada;Algo;Bastante;Bastante;Bastante
+5;Femenino;Entre 18 y 20;Si;Arquitectura, Ingeniería y Diseño;Bastante;Un poco;Algo;Algo;Bastante;Un poco;Nada;Algo;Bastante;Algo;Nada;Algo;Algo;Mucho;Mucho
+6;Femenino;Entre 18 y 20;Si;Arquitectura, Ingeniería y Diseño;Mucho;Nada;Mucho;Bastante;Bastante;Bastante;Bastante;Mucho;Mucho;Nada;Nada;Bastante;Bastante;Mucho;Bastante
+7;Masculino;Entre 18 y 20;Si;Ciencias Sociales y de la Comunicación;Mucho;Un poco;Algo;Mucho;Bastante;Un poco;Un poco;Mucho;Mucho;Un poco;Nada;Algo;Bastante;Bastante;Algo
+8;Masculino;Entre 18 y 20;Si;Ciencias Sociales y de la Comunicación;Bastante;Algo;Bastante;Bastante;Bastante;Bastante;Un poco;Mucho;Bastante;Algo;Nada;Bastante;Bastante;Algo;Bastante
+9;Masculino;Entre 21 y 25;Si;Arquitectura, Ingeniería y Diseño;Bastante;Algo;Bastante;Un poco;Algo;Bastante;Algo;Bastante;Bastante;Bastante;Nada;Bastante;Bastante;Algo;Bastante
+10;Femenino;Entre 18 y 20;Si;Ciencias Biomédicas y de la Salud;Algo;Un poco;Bastante;Bastante;Bastante;Algo;Nada;Mucho;Mucho;Bastante;Nada;Bastante;Bastante;Bastante;Bastante
+11;Femenino;Entre 18 y 20;Si;Ciencias Biomédicas y de la Salud;Algo;Un poco;Algo;Bastante;Mucho;Algo;Bastante;Mucho;Mucho;Bastante;Nada;Bastante;Bastante;Bastante;Bastante
+12;Masculino;Entre 18 y 20;Si;Actividad física y deporte;Mucho;Algo;Bastante;Bastante;Mucho;Un poco;Algo;Mucho;Mucho;Bastante;Nada;Mucho;Mucho;Mucho;Mucho
+13;Masculino;Entre 18 y 20;Si;Arquitectura, Ingeniería y Diseño;Un poco;Un poco;Bastante;Mucho;Mucho;Mucho;Mucho;Mucho;Mucho;Nada;Nada;Bastante;Bastante;Bastante;Bastante
+14;Masculino;Entre 18 y 20;Si;Arquitectura, Ingeniería y Diseño;Mucho;Un poco;Bastante;Algo;Mucho;Algo;Un poco;Bastante;Mucho;Algo;Un poco;Bastante;Mucho;Mucho;Mucho
+15;Masculino;Entre 18 y 20;Si;Ciencias Sociales y de la Comunicación;Bastante;Un poco;Bastante;Algo;Bastante;Bastante;Algo;Mucho;Mucho;Algo;Nada;Bastante;Mucho;Bastante;Bastante
+16;Masculino;Entre 18 y 20;Si;Arquitectura, Ingeniería y Diseño;Mucho;Nada;Mucho;Mucho;Mucho;Bastante;Algo;Mucho;Mucho;Algo;Nada;Mucho;Mucho;Mucho;Mucho
+17;Masculino;Entre 21 y 25;Si;Arquitectura, Ingeniería y Diseño;Mucho;Nada;Mucho;Bastante;Bastante;Algo;Bastante;Mucho;Mucho;Algo;Nada;Bastante;Mucho;Mucho;Mucho
+18;Femenino;Entre 18 y 20;Si;Actividad física y deporte;Mucho;Nada;Bastante;Bastante;Bastante;Algo;Algo;Mucho;Mucho;Nada;Nada;Bastante;Mucho;Mucho;Mucho
+19;Femenino;Entre 18 y 20;Si;Ciencias Sociales y de la Comunicación;Un poco;Algo;Bastante;Bastante;Bastante;Un poco;Un poco;Mucho;Bastante;Algo;Nada;Algo;Algo;Algo;Bastante
+20;Masculino;> 40;Si;Ciencias Biomédicas y de la Salud;Algo;Nada;Bastante;Algo;Algo;Nada;Nada;Bastante;Bastante;Algo;Nada;Un poco;Bastante;Bastante;Bastante
+21;Femenino;Entre 18 y 20;Si;Arquitectura, Ingeniería y Diseño;Algo;Bastante;Bastante;Bastante;Algo;Nada;Un poco;Bastante;Mucho;Bastante;Nada;Bastante;Bastante;Algo;Mucho
+22;Masculino;Entre 18 y 20;Si;Arquitectura, Ingeniería y Diseño;Mucho;Nada;Mucho;Mucho;Mucho;Bastante;Mucho;Mucho;Mucho;Mucho;Nada;Bastante;Mucho;Mucho;Mucho
+23;Masculino;Entre 18 y 20;Si;Arquitectura, Ingeniería y Diseño;Algo;Nada;Algo;Bastante;Mucho;Un poco;Nada;Mucho;Bastante;Bastante;Nada;Mucho;Bastante;Un poco;Mucho
