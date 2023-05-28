@@ -1,0 +1,95 @@
+topic: ~Dialogue()
+language: spe
+
+
+concept:(hola) [hola buenas "buenos días" "buenas tardes" "buenas noches" "qué tal?" "saludos" jei ]
+concept:(adios) ^rand[adios "hasta luego" "hasta otra" "nos vemos" "hasta pronto" chao]
+concept:(si) [si positivo vale evidentemente correcto "de acuerdo" "me parece bien" "{muy está} bien" "{pues} claro {que si}" "por supuesto" "me parece correcto" afirmativo "sin duda {alguna}" "¿por que no?" ]
+concept:(no) [no negativo "no quiero" "no me parece bien" nunca "ni en broma" "de ninguna forma" "nada que ver" "para nada" "no me apetece"]
+concept:(meGusta) ["me gusta {mucho bastante demasiado "un monton"}" "me encanta {mucho bastante demasiado "un monton"}" "no esta {nada} mal" "un monton" mucho bastante demasiado tambien igual "esta {muy} bien" "mas que *" "no hay {*} mejor {*}"]
+concept:(noMeGusta) ["nada de nada" "no me gusta {mucho demasiado}" mucho demasiado "no lo conozco {todavia demasiado mucho}" "podria estar mejor" "podria mejorar" "hay {*} mejores"]
+concept: (bien) [bien "mas o menos" "pichi picha" "mejor *" "facil" "{todo} en orden" controlado "bajo control"]
+concept: (mal) [mal "podria ir mejor" "podria estar mejor" complicado complejo dificil fatal]
+
+concept:(nombre_hombre) [Antonio Jose Manuel Francisco Juan David "Jose Antonio" "Jose Luis" Javier "Francisco Javier" Jesús Daniel Carlos Miguel Alejandro "Jose Manuel" Rafael Pedro Ángel "Miguel Ángel" "Jose María" Fernando Pablo Luis Sergio Jorge Alberto "Juan Carlos" "Juan José" Álvaro Diego Adrián "Juan Antonio" Raúl Enrique Ramón Vicente Iván Rubén Óscar Andrés Joaquín "Juan Manuel" Santiago Eduardo Víctor Roberto Jaime "Francisco José" Mario Ignacio Nacho Alfonso Salvador Ricardo Marcos Jordi Emilio Julián Julio Guillermo Gabriel Tomás Agustín "Jose Miguel" Marc Gonzalo Félix "Jose Ramón" Mohamed Hugo Joan Ismael Nicolás Cristian Samuel Mariano Josep Domingo "Juan Francisco" Aitor Martín Alfredo Sebastián "Jose Carlos" Felipe Héctor César "Jose Ángel" "Jose Ignacio" "Victor Manuel" Iker Gregorio "Luis Miguel" Alex "Jose Francisco" "Juan Luis" Rodrigo Albert Xavier Lorenzo Eusebio Asier Pepe Manolo Borja Oscar]
+
+concept:(nombre_mujer) ["Mari Carmen" María Carmen Josefa Isabel "Ana maría" "Maria Pilar" "María Dolores" "Maria Teresa" Ana Laura Francisca "Mari Ángeles" Cristina Antonia Marta Dolores "Maria Isabel" "Maria José" Lucia "Maria Luisa" Pilar Elena Concepción Sara Paula Manuela Mercedes "Rosa Maria" Raquel "Maria Jesús" Juana Rosario Teresa Encarnación Beatriz Nuria Silvia Julia Rosa Montserrat Patricia Irene Andrea Rocío Mónica Alba "Mari Mar" Ángela Sonia Alicia Sandra Susana Margarita Marina Yolanda "Maria Josefa" Natalia "Maria Rosario" Inmaculada "Eva" "Maria Mercedes" Esther "Ana Isabel" Angeles Noelia Claudia Verónica Amparo "Maria Rosa" Carolina "Maria Victoria" Carla "Eva María" "Maria Concepción" Nerea Lorena "Ana Belén" Victoria Miriam "Maria Elena" Sofía Catalina Inés "Maria Antonia" Consuelo Emilia "Maria Nieves" Lidia Luisa Gloria Celia Olga Aurora Esperanza Josefina "Maria Soledad" Soledad Sole Sol Milagros "Maria Cristina" Daniela Nieves Trinidad Leire Marisa Teo Teodora Maeva ]
+
+
+
+u:(~hola {Pepper})  ^start(animations/Stand/Gestures/Hey_1) Hola, aloja, salut, bonyur, jelou. No estoy seguro cómo saludarte y me he presentado en varios idiomas. ^start(Stand/Gestures/Explain_2) Espero no molestarte, pero me gustaría poder hablar contigo. ¿Tienes un momento? ^start(emotions_moves-ef6f90/start) por favor.
+    u1: (~si) %comenzarConversar ^start(animations/Stand/Gestures/Great_1) Por fin una persona que quiere hablar conmigo. ^start(Stand/Gestures/Explain_3) Qué tal un chiste para romper el hielo? Te sabes alguno?
+        u2: (~si) Cuentamelo, por favor
+            u3: (*) ^run(animations/Stand/Emotions/Positive/Laugh_1) ha sido genial. ^gotoReactivate(preguntarNombre)
+        u2: (~no) Pues te cuento uno yo. ¿Qué son 50 físicos y 50 químicos juntos?. Pues cien, tificos. En fin. ^run(animations/Stand/Emotions/Positive/Laugh_3) ^gotoReactivate(preguntarNombre) 
+    
+    u1: ([~no "Estoy {demasiado muy} ocupado" "estoy {demasiado muy} ocupada" ]) ^start(animations/Stand/Waiting/ScratchEye_1)  Nadie nunca quiere hablar conmigo. ^wait(animations/Stand/Waiting/ScratchEye_1) Acaso te hago sentir incómodo? 
+        u2: ([~si "Un poco" bastante "puede ser" "creo que [si "un poco"]"] {*}) ^start(animations/Stand/Emotions/Negative/Surprise_3)  Pero ¿por qué? ^wait(animations/Stand/Emotions/Negative/Surprise_3) ¿Hice algo para molestarte?
+            u3: ([~si "puede ser"] {*}) ^start(animations/Stand/Emotions/Negative/Sad_2) Perdoname. no volverá a pasar. $wait5seg=1
+            u3: (~no) ^start(animations/Stand/Emotions/Positive/Proud_3) Entonces? No lo entiendo. Es solo que no quieres hablar conmigo. no?
+                u4: (~si) ^start(Stand/Emotions/Negative/Humiliated_1) Bueno. Está bien. No importa.  $wait5seg=1
+                u4: (~no) ^start(animations/Stand/Gestures/Desperate_2) Realmente no lo entiendo ^wait(animations/Stand/Gestures/Desperate_2) Pero bueno. cuando quieras hablar sabes dónde encontrarme. 
+        u2: ([~no "no es eso" "eso no es"]) ¿^start(animations/Stand/Emotions/Negative/Surprise_3)  Entonces ¿qué sucede? ^wait(animations/Stand/Emotions/Negative/Surprise_3) ¿Estás estresado por algo? 
+            u3: ([~si "puede ser" "un poco"] {*}) ^start(Stand/Gestures/Explain_2) Qué sucede?
+                u4: ({*} !nada ) ^start(animations/Stand/Emotions/Negative/Sad_2) jumm calmate. Seguro que todo cambia a mejor. vale?
+                u4: ({*} [nada "no quiero hablar de eso" "no importa" "no te preocupes"] ) ^start(Stand/Emotions/Negative/Humiliated_1) Bueno... Cuando quieras hablar conmigo, ya sabes dónde encontrarme
+            u3: (~no) ^start(animations/Stand/Gestures/Angry_2) Realmente no lo entiendo ^wait(animations/Stand/Gestures/Angry_2) Pero bueno. cuando quieras hablar sabes dónde encontrarme.
+        
+
+#Se reproduce cuando el contador de 5seg activado por $wait5seg acaba          
+u: (e:waitOver) %hablaConmigo ^start(Stand/Gestures/Explain_2) Anda. habla conmigo por favor. ¿Sí?
+    u1: (~si) ^gotoReactivate(comenzarConversar)
+    u1: (~no) %insistir ^start(Stand/Gestures/Explain_2) Anda. porfa porfa
+        u2: (~si) ^gotoReactivate(comenzarConversar)
+        u2: (~no) ^start(animations/Stand/Emotions/Negative/Sad_2) No voy a parar hasta que me digas que sí. ^gotoReactivate(insistir)
+
+proposal: %preguntarNombre ¿Cómo te llamas?
+    u1: ({"me llamo" "mi nombre es" soy} _[~nombre_hombre ~nombre_mujer *]) $1 $name=$1. ^run(animations/Stand/Emotions/Positive/Interested_2) Lindo nombre. Y de Donde eres? De Madrid?
+        u2: ({"soy de" "vengo de"} [~si ~no ] {*} ) ^start(animations/Stand/Emotions/Positive/Enthusiastic_1) Yo soy de Japón. ^wait(animations/Stand/Emotions/Positive/Enthusiastic_1) Pero te digo un secreto? Mi corazón está en Madrid, me encanta este lugar. ^run(animations/Stand/Emotions/Positive/Amused_1) Y a ti?
+            u3: ({a mi} [~si ~meGusta ] {*}) ^run(animations/Stand/Emotions/Positive/Happy_1) ¡Me alegro!  ^gotoReactivate(preguntarComida) 
+            u3: ({a mi} [~no ~noMeGusta "mas o menos" "pichi picha"] {*}) ^start(animations/Stand/Waiting/ScratchEye_1) Oh, qué pena. ^wait(animations/Stand/Waiting/ScratchEye_1) ^gotoReactivate(preguntarComida) 
+                
+                
+proposal: %preguntarComida ^start(Stand/Gestures/Explain_4) ¿Cuál es tu comida favorita? ^end(Stand/Gestures/Explain_4)
+    u1: ([~meGusta {*}]) ^start(animations/Stand/Emotions/Positive/Interested_1) No me gusta nada eso. ^stop(animations/Stand/Emotions/Positive/Interested_1) A mi me encantan los electrones con jamón. Mucho mejor, ¿no crees?
+        u2: (~si) ^start(animations/Stand/Gestures/Great_1) Que bien que coincidas conmigo, me agradas. ^gotoReactivate(preguntarEstudios) 
+        u2: (~no) ^start(animations/Stand/Emotions/Positive/Proud_3) Bueno cada quién con sus opiniones. ^wait(animations/Stand/Emotions/Positive/Proud_3) ^gotoReactivate(preguntarEstudios) 
+        
+proposal: %preguntarEstudios ^start(Stand/Gestures/Explain_2) ¿Qué estudias? ^wait(Stand/Gestures/Explain_2)
+    u1: ({*} !medicina) ^run(animations/Stand/Emotions/Positive/Interested_2) Interesante. A lo mejor yo también haga lo mismo algún día. Lo único que no podría hacer es estudiar medicina, porque la sangre... ^run(animations/Stand/Emotions/Positive/Interested_1), me revuelve el estómago solo de pensarlo. ^gotoReactivate(preguntarSemestre)
+    u1: ({*} medicina) ^run(animations/Stand/Emotions/Positive/Interested_2)  Interesante. A lo mejor yo también haga lo mismo algún día. Lo único que no podría hacer es Informática, porque no aguanto a los robots... ^run(animations/Stand/Gestures/Desperate_2), me revuelve el estómago solo de pensarlo. ^gotoReactivate(preguntarSemestre)
+
+proposal: %preguntarSemestre En fin, ¿Qué tal va el semestre?
+    u1: ({*} ~bien) ^start(animations/Stand/Emotions/Positive/Excited_2) Me alegro por ti. Y dime, ¿Qué es lo que más te gusta de tu carrera?
+        u2: (*) ^rand["^run(animations/Stand/Emotions/Positive/Interested_2) Eso se escucha muy bien. ¿Y cuál es tu trabajo soñado?" "Hmm ya veo. ^run(animations/Stand/Emotions/Positive/Interested_2) ¿ Y por qué escogiste venir a esta universidad?"] 
+            u3: (*) ^start(animations/Stand/Gestures/Enthusiastic_5) Guau, gracias por contarmelo. Me ha gustado mucho hablar contigo y conocerte. Antes de despedirnos. ^gotoReactivate(adivinanza)
+            
+    u1: ({*} ~mal) ^start(animations/Stand/Emotions/Negative/Sad_2) Una pena. Hay algo que te esté preocupando?
+        u2: (*) ^rand["Espero que todo salga bien. ^start(animations/Stand/Emotions/Positive/Hysterical_1) Me cuentas cómo termina. vale? ^wait(animations/Stand/Emotions/Positive/Hysterical_1)" "Bueno, seguro el siguiente semestre irá mejor. ^start(animations/Stand/Emotions/Positive/Hysterical_1) Confío en ti. Arriba el ánimo. vale? ^wait(animations/Stand/Emotions/Positive/Hysterical_1)"] 
+            u3: (*) Bien. ^start(animations/Stand/Gestures/Enthusiastic_5) Me ha gustado mucho hablar contigo y conocerte. Antes de despedirnos. ^gotoReactivate(adivinanza)
+
+proposal: %adivinanza ¿Quieres jugar a una adivinaza conmigo?
+    u1: (~si) ^start(animations/Stand/Gestures/Great_1) Genial. ^wait(animations/Stand/Gestures/Great_1) Aquí va. ¿Qué hace una persona corriendo sin parar alrededor de una facultad?. ^run(animations/Stand/Emotions/Positive/Interested_2)
+        u3: ({*} carrera {*}) ^start(animations/Stand/Gestures/Excited_2) ¡Correcto! Muy bien. Eso ha sido divertido. ^wait(animations/Stand/Gestures/Excited_2) ^gotoReactivate(cierre)
+        u3: ({*} [!carrera "no lo se" "ni idea" "que {hace}?" "dimelo tu"] {*}) ¡LA CARRERA! ^run(animations/Stand/Emotions/Positive/Mocker_1) Eso ha sido divertido. ^gotoReactivate(cierre)
+        
+    u1: (~no) Bueno. No pasa nada. ^gotoReactivate(cierre)
+
+proposal: %cierre ^start(animations/Stand/Emotions/Positive/Amused_1) ¿Te ha gustado hablar conmigo?.
+    u1: ([~si ~meGusta "ha estado bien"]) ^run(animations/Stand/Emotions/Positive/Happy_3) ¡Me alegro! Ha sido un gusto conocerte ^start(animations/Stand/Emotions/Positive/Excited_3) Espero que tengas un buen día. ^wait(animations/Stand/Emotions/Positive/Excited_3)
+    u1: ([~no ~noMeGusta] ) ^start(animations/Stand/Waiting/ScratchEye_1)  Oh. qué pena. ^wait(animations/Stand/Waiting/ScratchEye_1)  De todas formas ^start(animations/Stand/Emotions/Positive/Excited_3) ha sido un gusto conocerte, espero que tengas un buen día. ^wait(animations/Stand/Emotions/Positive/Excited_3) 
+
+
+u:(~adios) Hasta luego!
+
+proposal: %proposalRobotRepite
+    u1: (no se entiende) %noEntendi ^rand["Perdona, no entendi lo que dijiste. Podrias repetirmelo por favor?" "Disculpa $name, podrias repetir?" "Uy creo que necesito limpiarme los oidos. podrias repetirmelo por fa?" "No te he escuchado muy bien, me lo dices otra vez por fis?"]
+
+u: (["{podemos quieres puedes puedo quiero hablemos} hablar de otra cosa" "[puedo quiero "voy a"] preguntarte algo"]) %talkChatGPT $ChatGPT="Hazme conversacion"
+    
+u: (Envia a CHATGPT _*) $ChatGPT=$1
+    
+#u:(e:Dialog/NotUnderstood) No entendi pero $ChatGPT=$Dialog/LastInput
+
+
+

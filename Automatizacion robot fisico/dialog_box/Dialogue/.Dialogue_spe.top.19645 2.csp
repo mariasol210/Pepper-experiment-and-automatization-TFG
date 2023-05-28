@@ -1,0 +1,52 @@
+topic: ~Dialogue()
+language: spe
+
+concept: (bien) [bien "mas o menos" "pichi picha" "mejor *" "facil"]
+concept: (mal) [mal "podria ir mejor" "podria estar mejor"  ]
+
+u:(~hola)  Hola, aloja, salut, bonyur, jelou! No estoy seguro cómo saludarte y ... ¿Tienes un momento? por favor.
+    u1: (~si) Por fin una persona que quiere hablar conmigo. ¿Qué tal un chiste para romper el hielo? ¿Te sabes alguno?
+        u2: (~si) Cuentamelo, por favor
+            u3: (*) Ha sido genial. ^gotoReactivate(preguntarNombre)
+        u2: (~no) Pues te cuento uno yo. ¿Qué son 50 físicos y 50 químicos juntos? Pues 100tificos. ... En fin. ^gotoReactivate(preguntarNombre) 
+    
+    u1: (~no) Nadie nunca quiere hablar conmigo. ¿Acaso te hago sentir incómodo?
+        u2:([~si "un poco" bastante "puede ser"] {*}) Pero, ¿Por qué? ¿Hice algo para molestarte?
+        u2:([~no "nada que ver"] {*}) Entonces, ¿Qué sucede? ¿Estás estresado por algo?
+
+proposal: %preguntarNombre ¿Cómo te llamas?
+    u1: ({"me llamo" "mi nombre es" soy} _[~nombre_hombre ~nombre_mujer *]) $1 . Que Lindo nombre. ¿Eres de esta ciudad?
+        u2: ({"soy de" "vengo de"} [~si ~no ] {*} ) Yo soy de Japón. Pero te digo un secreto? Mi corazón está en Madrid, me encanta este lugar. ¿Y a ti?
+            u3: ({a mi} [~si ~meGusta ] {*}) ¡Me alegro! ^gotoReactivate(preguntarComida) 
+            u3: ({a mi} [~no ~noMeGusta "mas o menos" "pichi picha"] {*}) Oh, que pena. ^gotoReactivate(preguntarComida) 
+                
+                
+proposal: %preguntarComida ¿Cuál es tu comida favorita?
+    u1: ([~meGusta {*}]) No me gusta nada eso. A mi encanta la electrones con jamón. Mucho mejor, ¿no crees?
+        u2: (~si) Que bien que coincidas conmigo, me agradas. ^gotoReactivate(preguntarEstudios) 
+        u2: (~no) Bueno cada quién con sus opiniones. ^gotoReactivate(preguntarEstudios) 
+        
+proposal: %preguntarEstudios ¿Qué estudias?
+    u1: ({*} !medicina) Interesante. A lo mejor ... Lo único que no podría hacer es estudiar medicina... ¿Qué tal va el semestre? ^gotoReactivate(preguntarSemestre)
+    u1: ({*} medicina) Interesante. A lo mejor ... Lo único que no podría hacer es Informática... ^gotoReactivate(preguntarSemestre)
+
+proposal: %preguntarSemestre ¿Qué tal va el semestre?
+    u1: ({} {bastante muy} ~bien)
+
+
+u:(~adios) Hasta luego!
+
+
+
+concept:(hola) [hola buenas "buenos días" "buenas tardes" "buenas noches" "qué tal?" "saludos" jei ]
+concept:(adios) ^rand[adios "hasta luego" "hasta otra" "nos vemos" "hasta pronto" chao]
+concept:(si) [si positivo vale evidentemente correcto "de acuerdo" "me parece bien" "{muy está} bien" "{pues} claro {que si}" "por supuesto" "me parece correcto" afirmativo "sin duda {alguna}" "¿por que no?" ]
+concept:(no) [no negativo "no quiero" "no me parece bien" nunca "ni en broma" "de ninguna forma" "nada que ver" "para nada"]
+concept:(meGusta) ["me gusta {mucho bastante demasiado "un monton"}" "me encanta {mucho bastante demasiado "un monton"}" "no esta {nada} mal" "un monton" mucho bastante demasiado tambien igual "esta {muy} bien" "mas que *" "no hay {*} mejor {*}"]
+concept:(noMeGusta) ["nada de nada" "no me gusta {mucho demasiado}" mucho demasiado "no lo conozco {todavia demasiado mucho}" "podria estar mejor" "podria mejorar" "hay {*} mejores"]
+concept: (bien) [bien "mas o menos" "pichi picha" "mejor *" "facil" "{todo} en orden" controlado "bajo control"]
+concept: (mal) [mal "podria ir mejor" "podria estar mejor" "bajo control"]
+
+concept:(nombre_hombre) [Antonio Jose Manuel Francisco Juan David "Jose Antonio" "Jose Luis" Javier "Francisco Javier" Jesús Daniel Carlos Miguel Alejandro "Jose Manuel" Rafael Pedro Ángel "Miguel Ángel" "Jose María" Fernando Pablo Luis Sergio Jorge Alberto "Juan Carlos" "Juan José" Álvaro Diego Adrián "Juan Antonio" Raúl Enrique Ramón Vicente Iván Rubén Óscar Andrés Joaquín "Juan Manuel" Santiago Eduardo Víctor Roberto Jaime "Francisco José" Mario Ignacio Nacho Alfonso Salvador Ricardo Marcos Jordi Emilio Julián Julio Guillermo Gabriel Tomás Agustín "Jose Miguel" Marc Gonzalo Félix "Jose Ramón" Mohamed Hugo Joan Ismael Nicolás Cristian Samuel Mariano Josep Domingo "Juan Francisco" Aitor Martín Alfredo Sebastián "Jose Carlos" Felipe Héctor César "Jose Ángel" "Jose Ignacio" "Victor Manuel" Iker Gregorio "Luis Miguel" Alex "Jose Francisco" "Juan Luis" Rodrigo Albert Xavier Lorenzo Eusebio Asier Pepe Manolo Borja Oscar]
+
+concept:(nombre_mujer) ["Mari Carmen" María Carmen Josefa Isabel "Ana maría" "Maria Pilar" "María Dolores" "Maria Teresa" Ana Laura Francisca "Mari Ángeles" Cristina Antonia Marta Dolores "Maria Isabel" "Maria José" Lucia "Maria Luisa" Pilar Elena Concepción Sara Paula Manuela Mercedes "Rosa Maria" Raquel "Maria Jesús" Juana Rosario Teresa Encarnación Beatriz Nuria Silvia Julia Rosa Montserrat Patricia Irene Andrea Rocío Mónica Alba "Mari Mar" Ángela Sonia Alicia Sandra Susana Margarita Marina Yolanda "Maria Josefa" Natalia "Maria Rosario" Inmaculada "Eva" "Maria Mercedes" Esther "Ana Isabel" Angeles Noelia Claudia Verónica Amparo "Maria Rosa" Carolina "Maria Victoria" Carla "Eva María" "Maria Concepción" Nerea Lorena "Ana Belén" Victoria Miriam "Maria Elena" Sofía Catalina Inés "Maria Antonia" Consuelo Emilia "Maria Nieves" Lidia Luisa Gloria Celia Olga Aurora Esperanza Josefina "Maria Soledad" Soledad Sole Sol Milagros "Maria Cristina" Daniela Nieves Trinidad Leire Marisa Teo Teodora Maeva ]
